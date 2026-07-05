@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
 export default function Onboarding() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     year: "",
     branch: "",
@@ -25,7 +27,10 @@ export default function Onboarding() {
       console.error(error);
       setStatus("Something went wrong. Check the console.");
     } else {
-      setStatus("Saved successfully!");
+      setStatus("Saved successfully! Redirecting...");
+      setTimeout(() => {
+        router.push("/roadmap");
+      }, 1000);
     }
   }
 
@@ -65,7 +70,7 @@ export default function Onboarding() {
 
         <button
           type="submit"
-          className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800"
+        className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800"
         >
           Submit
         </button>
