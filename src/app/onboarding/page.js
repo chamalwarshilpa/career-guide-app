@@ -53,12 +53,17 @@ export default function Onboarding() {
           className="w-full border rounded p-3"
         />
 
-        <input
-          name="goal"
-          onChange={handleChange}
-          placeholder="Career goal (e.g. SDE, Data Science, undecided)"
-          className="w-full border rounded p-3"
-        />
+<select name="goal" onChange={handleChange} className="w-full border rounded p-3">
+          <option value="">Select your career goal</option>
+          <option value="Data Science / Analytics">Data Science / Analytics</option>
+          <option value="Software Development (SDE)">Software Development (SDE)</option>
+          <option value="Web Development">Web Development</option>
+          <option value="AI / Machine Learning">AI / Machine Learning</option>
+          <option value="Cybersecurity">Cybersecurity</option>
+          <option value="Cloud / DevOps">Cloud / DevOps</option>
+          <option value="Mobile App Development">Mobile App Development</option>
+          <option value="Undecided / Exploring">Undecided / Exploring</option>
+        </select>
 
         <textarea
           name="skills"

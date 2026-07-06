@@ -187,14 +187,7 @@ const roadmaps = {
 };
 
 function matchDomain(goal) {
-  const g = (goal || "").toLowerCase();
-  if (g.includes("data")) return "Data Science / Analytics";
-  if (g.includes("ml") || g.includes("machine learning") || g.includes("ai")) return "AI / Machine Learning";
-  if (g.includes("sde") || g.includes("software") || g.includes("developer")) return "Software Development (SDE)";
-  if (g.includes("web")) return "Web Development";
-  if (g.includes("security") || g.includes("cyber")) return "Cybersecurity";
-  if (g.includes("cloud") || g.includes("devops")) return "Cloud / DevOps";
-  if (g.includes("mobile") || g.includes("app dev") || g.includes("android") || g.includes("ios")) return "Mobile App Development";
+  if (roadmaps[goal]) return goal;
   return "Undecided / Exploring";
 }
 
