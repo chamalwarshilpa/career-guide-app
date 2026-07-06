@@ -14,6 +14,9 @@ export default function Navbar() {
       <Link href="/students" className="text-sm text-gray-600 hover:text-black">
         All Profiles
       </Link>
+      <Link href="/tracker" className="text-sm text-grey-600 hover:text-black">
+      Skill Tracker
+      </Link>
     </nav>
   );
 }
